@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Refresher Series – Blanc Brew</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5dc;
+      color: #333;
+
+      /* Added background image */
+      background-image: url("images/bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.2rem 2rem;
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      backdrop-filter: blur(4px);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-menu > li {
+      position: relative;
+    }
+
+    .logo {
+      height: 80px;
+      width: 140px;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      color: #6f4e37;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    .submenu li {
+      list-style: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    .submenu li:last-child {
+      border-bottom: none;
+    }
+
+    .submenu li a {
+      color: #333;
+      padding: 0.75rem 1rem;
+    }
+
+    .submenu li a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    /* Banner styling */
+    .banner {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    /* Responsive grid for refresher items */
+    #refresher-series .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Fixed 3 columns on wider screens */
+    @media (min-width: 900px) {
+      #refresher-series .menu-items {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .menu-items .item {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .menu-items .item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+        </li>
+        <li class="dropdown">
+          <a href="about.html">About Us</a>
+          <ul class="submenu">
+            <li><a href="about.html#history">Introduction</a></li>
+            <li><a href="about.html#history">History</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="menu.html">Menu</a>
+          <ul class="submenu">
+            <li><a href="coffee.html">Coffee Series</a></li>
+            <li><a href="tea.html">Tea Series</a></li>
+            <li><a href="bubbletea.html">Bubble Tea Series</a></li>
+            <li><a href="matcha.html">Matcha Series</a></li>
+            <li><a href="refresher.html">Refresher Series</a></li>
+            <li><a href="frappe.html">Frappe Series</a></li>
+            <li><a href="pastry.html">Pastries</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pasta.html">Pasta</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="career.html">Career Center</a>
+          <ul class="submenu">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="department.html">Our Department</a></li>
+          </ul>
+        </li>
+        <li><a href="merchendise.html">Merchandise</a></li>
+        <li><a href="outlet.html">Outlet</a></li>
+        <li><a href="reward.html">Reward</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="group.html">Group</a></li>      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner inserted here -->
+  <div class="banner">
+    <img src="images/banner.png" alt="Menu Banner" />
+  </div>
+
+  <section id="refresher-series">
+    <h2>Refresher Series</h2>
+    <div class="menu-items">
+      <div class="item">
+        <h3>Strawberry Ade</h3>
+        <img src="images/refreshener/strawberryade.png" alt="Strawberry Ade" width="230" height="330">
+        <p>A refreshing and vibrant strawberry-flavored sparkling drink bursting with natural sweetness and a hint of tanginess, perfect to cool you down on a sunny day.</p>
+      </div>
+      <div class="item">
+        <h3>Blackberry Sparkle</h3>
+        <img src="images/refreshener/blackberrysparkling.png" alt="Blackberry Sparkle" width="230" height="330">
+        <p>A sparkling delight blending juicy blackberries with a crisp, bubbly finish, offering a perfect balance of sweet and tart in every sip.</p>
+      </div>
+      <div class="item">
+        <h3>Berries Mix Refresher</h3>
+        <img src="images/refreshener/berriesmixsparkling.png" alt="Berries Mix Refresher" width="230" height="330">
+        <p>A revitalizing blend of mixed berries infused with sparkling water, delivering a fruity and invigorating taste that refreshes your palate instantly.</p>
+      </div>
+        <div class="item">
+        <h3>Passion Fruit Ade</h3>
+        <img src="images/refreshener/passionfruitade.png" alt="Passion Fruit Ade" width="230" height="330">
+        <p>Exotic passion fruit meets fizzy sparkle in this tropical drink, combining sweetness and tartness for a truly uplifting refreshment.</p>
+      </div>
+	<div class="item">
+        <h3>Lime Ade</h3>
+        <img src="images/refreshener/limeade.png" alt="Lime Ade" width="230" height="330">
+        <p>A zesty and tangy lime-flavored sparkling beverage, crafted to deliver a crisp and refreshing citrus kick that awakens your senses.</p>
+      </div>
+      <div class="item">
+        <h3>Mango Ade</h3>
+        <img src="images/refreshener/mangoade.png" alt="Mango Ade" width="230" height="330">
+        <p>Sweet and juicy mango puree mixed with sparkling water creates a tropical, thirst-quenching beverage with a smooth and fruity finish.</p>
+      </div>
+      <div class="item">
+        <h3>Blue Lemon Ade</h3>
+        <img src="images/refreshener/bluelemon.png" alt="Blue Lemon Ade" width="230" height="330">
+        <p>A vibrant blue-hued lemonade with sparkling bubbles, combining the classic citrus tang with a playful and refreshing twist.</p>
+      </div>
+      <div class="item">
+        <h3>Pomegranate Sparkling</h3>
+        <img src="images/refreshener/pomegranatesparkling.png" alt="Pomegranate Sparkling" width="230" height="330">
+        <p>A bold and tangy sparkling drink made from rich pomegranate juice, offering antioxidants and a delightful balance of tartness and sweetness.</p>
+      </div>
+      <div class="item">
+        <h3>Kiwi Ade</h3>
+        <img src="images/refreshener/kiwiade.png" alt="Kiwi Ade" width="230" height="330">
+        <p>Tart and sweet kiwi flavors blend with effervescent bubbles, producing a uniquely refreshing and slightly tangy sparkling drink.</p>
+      </div>
+    </div>
+  </section>
+
+<footer style="background-color: #6f4e37; color: white; padding: 3rem 2rem; margin-top: 4rem;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+ 
+     <div style="flex: 1 1 200px;">
+      <h3 style="margin-bottom: 1rem;">Blanc Brew</h3>
+      <p style="line-height: 1.6;">A specialty café offering artisanal coffee, handcrafted drinks, and warm ambiance across Malaysia.</p>
+    </div>
+
+    <div style="flex: 1 1 150px; text-align: center;">
+  <h3 style="margin-bottom: 1rem;">Quick Links</h3>
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+    <li><a href="menu.html" style="color: white; text-decoration: none;">Menu</a></li>
+    <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+    <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 250px;">
+      <h3 style="margin-bottom: 1rem;">Contact Us</h3>
+      <p>Email: hello@blancbrew.com</p>
+      <p>Phone: +60 12-345 6789</p>
+      <p>Follow us:
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Instagram</a> |
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Facebook</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; font-size: 0.9rem;">
+    &copy; 2025 Blanc Brew. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
