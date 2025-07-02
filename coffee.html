@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coffee Series – Blanc Brew</title>
+  <link rel="stylesheet" href="style.css" />
+   <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5dc;
+      color: #333;
+
+      /* Background image */
+      background-image: url("images/bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.2rem 2rem;
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      backdrop-filter: blur(4px);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-menu > li {
+      position: relative;
+    }
+
+    .logo {
+      height: 80px;
+      width: 140px;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      color: #6f4e37;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    .submenu li {
+      list-style: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    .submenu li:last-child {
+      border-bottom: none;
+    }
+
+    .submenu li a {
+      color: #333;
+      padding: 0.75rem 1rem;
+    }
+
+    .submenu li a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    /* Banner styling */
+    .banner {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    /* Updated grid for coffee series */
+    #coffee-series .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Fix to 3 columns on wider screens */
+    @media (min-width: 900px) {
+      #coffee-series .menu-items {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .menu-items .item {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .menu-items .item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+        </li>
+        <li class="dropdown">
+          <a href="about.html">About Us</a>
+          <ul class="submenu">
+            <li><a href="about.html#history">Introduction</a></li>
+            <li><a href="about.html#history">History</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="menu.html">Menu</a>
+          <ul class="submenu">
+            <li><a href="coffee.html">Coffee Series</a></li>
+            <li><a href="tea.html">Tea Series</a></li>
+            <li><a href="bubbletea.html">Bubble Tea Series</a></li>
+            <li><a href="matcha.html">Matcha Series</a></li>
+            <li><a href="refresher.html">Refresher Series</a></li>
+            <li><a href="frappe.html">Frappe Series</a></li>
+            <li><a href="pastry.html">Pastries</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pasta.html">Pasta</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="career.html">Career Center</a>
+          <ul class="submenu">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="department.html">Our Department</a></li>
+          </ul>
+        </li>
+        <li><a href="merchendise.html">Merchandise</a></li>
+        <li><a href="outlet.html">Outlet</a></li>
+        <li><a href="reward.html">Reward</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="group.html">Group</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <img src="images/banner.png" alt="Menu Banner" />
+  </div>
+
+  <section id="coffee-series">
+    <h2>Coffee Series</h2>
+    <div class="menu-items">
+      <div class="item">
+        <h3>Iced Americano</h3>
+        <img src="images/coffee/icedamericano.png" alt="Iced Americano" width="230" height="310">
+        <p>Bold and robust espresso diluted with hot water, offering a rich, full-bodied flavor.</p>
+      </div>
+      <div class="item">
+        <h3>Iced Latte</h3>
+        <img src="images/coffee/icedlatte.png" alt="Iced Latte" width="230" height="290">
+        <p>Smooth and refreshing espresso blended with cold milk and ice – perfect for warm days.</p>
+      </div>
+      <div class="item">
+        <h3>Iced Spanish Latte</h3>
+        <img src="images/coffee/icedspanishlatte.png" alt="Spanish Latte" width="230" height="290">
+        <p>A rich blend of espresso, chilled milk, and a touch of sweetened condensed milk for a creamy, smooth finish.</p>
+      </div>
+      <div class="item">
+        <h3>Iced Mocha</h3>
+        <img src="images/coffee/icedmocha.png" alt="Mocha" width="230" height="290">
+        <p>Bold espresso blended with cold milk and chocolate syrup, served over ice for a refreshing, sweet boost.</p>
+      </div>
+      <div class="item">
+        <h3>Iced Strawberry Latte</h3>
+        <img src="images/coffee/strawberryicedlatte.png" alt="Strawberry Latte" width="230" height="290">
+        <p>A creative mix of espresso, milk, and real strawberry syrup – fruity, creamy, and energizing.</p>
+      </div>
+      <div class="item">
+        <h3>Iced Mint Latte</h3>
+        <img src="images/coffee/icedmintlatte.png" alt="Mint Latte" width="230" height="290">
+        <p>Cool mint flavor meets espresso and milk over ice – a crisp twist on the classic iced latte.</p>
+      </div>
+      <div class="item">
+        <h3>Iced Buttercream Latte</h3>
+        <img src="images/coffee/buttercreamlatte.png" alt="Buttercream Latte" width="230" height="290">
+        <p>Velvety espresso and milk infused with sweet buttercream syrup – indulgent and smooth.</p>
+      </div>
+      <div class="item">
+        <h3>Iced Caramel Machiato</h3>
+        <img src="images/coffee/caramelmachiato.png" alt="Strawberry Latte" width="230" height="290">
+        <p>Layers of espresso and milk over ice, topped with luscious caramel drizzle for a rich flavor experience.</p>
+      </div>
+      <div class="item">
+        <h3>Iced Aren Sugar Latte</h3>
+        <img src="images/coffee/arensugarlatte.png" alt="Aren Sugar Latte" width="230" height="290">
+        <p>Espresso and creamy milk sweetened with natural aren (palm) sugar for a toasty, earthy sweetness.</p>
+      </div>
+      <div class="item">
+        <h3>Hot Americano</h3>
+        <img src="images/coffee/hotamericano.png" alt="hot americano" width="230" height="290">
+        <p>Smooth espresso diluted with hot water to deliver a clean, full-bodied cup with a mellow bite.</p>
+      </div>
+      <div class="item">
+        <h3>Hot Latte</h3>
+        <img src="images/coffee/hotlatte.png" alt="Hot Latte" width="230" height="290">
+        <p>Classic espresso topped with steamed milk and a light layer of foam – creamy, cozy, and balanced.</p>
+      </div>
+      <div class="item">
+        <h3>Cappucino</h3>
+        <img src="images/coffee/cappucino.png" alt="Cappucino" width="230" height="290">
+        <p>Equal parts espresso, steamed milk, and thick foam – a bold yet airy coffee experience.</p>
+      </div>
+    </div>
+  </section>
+
+<footer style="background-color: #6f4e37; color: white; padding: 3rem 2rem; margin-top: 4rem;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+ 
+     <div style="flex: 1 1 200px;">
+      <h3 style="margin-bottom: 1rem;">Blanc Brew</h3>
+      <p style="line-height: 1.6;">A specialty café offering artisanal coffee, handcrafted drinks, and warm ambiance across Malaysia.</p>
+    </div>
+
+    <div style="flex: 1 1 150px; text-align: center;">
+  <h3 style="margin-bottom: 1rem;">Quick Links</h3>
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+    <li><a href="menu.html" style="color: white; text-decoration: none;">Menu</a></li>
+    <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+    <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 250px;">
+      <h3 style="margin-bottom: 1rem;">Contact Us</h3>
+      <p>Email: hello@blancbrew.com</p>
+      <p>Phone: +60 12-345 6789</p>
+      <p>Follow us:
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Instagram</a> |
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Facebook</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; font-size: 0.9rem;">
+    &copy; 2025 Blanc Brew. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
