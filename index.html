@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blanc Brew</title>
+  <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-image: url("images/bg.jpg"); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    header {
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+
+    #bg-video {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      object-fit: 100%;
+      z-index: -1;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.2rem 2rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-menu > li {
+      position: relative;
+    }
+
+    .logo {
+      height: 80px;
+      width: 140px;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      color: #6f4e37;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    .submenu li {
+      list-style: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    .submenu li:last-child {
+      border-bottom: none;
+    }
+
+    .submenu li a {
+      color: #333;
+      padding: 0.75rem 1rem;
+    }
+
+    .submenu li a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    .video-banner {
+      width: 100%;
+      height: 600px
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    .video-banner video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    section {
+      padding: 2rem 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+      #welcome {
+      background: #ffffff;
+      margin: 0 auto;
+      padding: 0;
+      color: #000;
+      max-width: 1200px;
+    }
+
+    .welcome-container {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .welcome-image {
+      flex: 1;
+      max-width: 50%;
+    }
+
+    .welcome-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 0;
+    }
+
+    .welcome-text {
+      flex: 1;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 50%;
+    }
+
+    .welcome-text h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    .welcome-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .welcome-container {
+        flex-direction: column;
+      }
+
+      .welcome-image,
+      .welcome-text {
+        max-width: 100%;
+      }
+    }
+
+#machine {
+  background: #ffffff;
+  margin: 6rem auto;
+  padding: 0;
+  color: #000;
+  max-width: 1200px;
+}
+
+.machine-container {
+  display: flex;
+  flex-direction: row; 
+  width: 100%;
+  align-items: stretch;
+}
+
+.machine-text {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.machine-text h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+}
+
+.machine-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.machine-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.machine-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .beans-container {
+    flex-direction: column;
+  }
+
+  .machine-image,
+  .beans-text {
+    max-width: 100%;
+  }
+
+    footer {
+      text-align: center;
+      padding: 0.5rem;
+      background-color: #000000;
+      color: #fff;
+      margin-top: 60px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="video-banner">
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="images/bg-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a></li>
+        <li class="dropdown"><a href="about.html">About Us</a>
+          <ul class="submenu">
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="history.html">History</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="menu.html">Menu</a>
+          <ul class="submenu">
+            <li><a href="coffee.html">Coffee Series</a></li>
+            <li><a href="tea.html">Tea Series</a></li>
+            <li><a href="bubbletea.html">Bubble Tea Series</a></li>
+            <li><a href="matcha.html">Matcha Series</a></li>
+            <li><a href="refresher.html">Refresher Series</a></li>
+            <li><a href="frappe.html">Frappe Series</a></li>
+            <li><a href="pastry.html">Pastries</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pasta.html">Pasta</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="career.html">Career Center</a>
+          <ul class="submenu">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="department.html">Our Department</a></li>
+          </ul>
+        </li>
+        <li><a href="merchendise.html">Merchandise</a></li>
+        <li><a href="outlet.html">Outlet</a></li>
+        <li><a href="reward.html">Reward</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="group.html">Group</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="welcome">
+    <div class="welcome-container">
+      <div class="welcome-image">
+        <img src="images/coffee-beans.png" alt="coffee tree">
+      </div>
+      <div class="welcome-text">
+        <h1>KNOW US</h1>
+        <p>Blanc Brew was born from a love of simple pleasures — a warm cup of coffee, the calm of slow mornings, and the joy of great company.</p>
+        <p>We serve expertly brewed coffee made from premium beans, paired with handcrafted pastries and cakes baked daily.</p>
+        <p>Our refreshers and frappés offer icy, creamy satisfaction. At Blanc Brew, we say: <strong>Sip Slowly, Live Fully.</strong></p>
+      </div>
+    </div>
+  </section>
+
+<section id="machine">
+  <div class="machine-container">
+    <div class="machine-text">
+      <h2>What’s in Your Cup?</h2>
+      <p>At Blanc Brew, we believe every great coffee starts with a great bean. That’s why we choose high-quality beans from top coffee-growing regions, each with its own unique flavor.</p>
+
+<p>We use Colombian and Ethiopian Arabica beans for a smooth, fruity taste. For a bold and earthy brew, we offer Sumatran Mandheling. If you prefer a sweeter cup, try our creamy Brazilian Santos. And for rich, balanced flavor, Guatemalan Antigua is a perfect choice.</p>
+
+<p>All our beans are roasted in small batches to keep their natural taste fresh. Whether you love espresso, lattes, or simple black coffee — there’s a perfect bean waiting for you at Blanc Brew.</p>
+
+    </div>
+    <div class="machine-image">
+      <img src="images/machine.png" alt="Coffee Beans" />
+    </div>
+  </div>
+</section>
+
+
+<footer style="background-color: #6f4e37; color: white; padding: 3rem 2rem; margin-top: 4rem;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+ 
+     <div style="flex: 1 1 200px;">
+      <h3 style="margin-bottom: 1rem;">Blanc Brew</h3>
+      <p style="line-height: 1.6;">A specialty café offering artisanal coffee, handcrafted drinks, and warm ambiance across Malaysia.</p>
+    </div>
+
+    <div style="flex: 1 1 150px; text-align: center;">
+  <h3 style="margin-bottom: 1rem;">Quick Links</h3>
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+    <li><a href="menu.html" style="color: white; text-decoration: none;">Menu</a></li>
+    <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+    <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 250px;">
+      <h3 style="margin-bottom: 1rem;">Contact Us</h3>
+      <p>Email: hello@blancbrew.com</p>
+      <p>Phone: +60 12-345 6789</p>
+      <p>Follow us:
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Instagram</a> |
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Facebook</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; font-size: 0.9rem;">
+    &copy; 2025 Blanc Brew. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
