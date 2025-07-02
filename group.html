@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Group Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("images/wallpaper.png"); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      max-width: 1000px;
+      background: white;
+      margin: 30px auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .text {
+      flex: 2;
+    }
+
+    .info {
+      margin-bottom: 10px;
+    }
+
+    .info strong {
+      display: inline-block;
+      width: 160px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text {
+        text-align: left;
+      }
+
+      .info strong {
+        width: 120px;
+      }
+    }
+
+  nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.2rem 2rem;
+      position: sticky;
+      top: 0;
+      left:0;
+      right:0;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, 0.5); 
+      backdrop-filter: blur(4px);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-menu > li {
+      position: relative;
+    }
+
+    .logo {
+      height: 80px;
+      width: 140px;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      color: #6f4e37;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    .submenu li {
+      list-style: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    .submenu li:last-child {
+      border-bottom: none;
+    }
+
+    .submenu li a {
+      color: #333;
+      padding: 0.75rem 1rem;
+    }
+
+    .submenu li a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    #menu .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .menu-items .item {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+  </style>
+</head>
+<body>
+<header>
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+        </li>
+        <li class="dropdown">
+          <a href="about.html">About Us</a>
+          <ul class="submenu">
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="history.html">History</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="menu.html">Menu</a>
+          <ul class="submenu">
+            <li><a href="coffee.html">Coffee Series</a></li>
+            <li><a href="tea.html">Tea Series</a></li>
+            <li><a href="bubbletea.html">Bubble Tea Series</a></li>
+            <li><a href="matcha.html">Matcha Series</a></li>
+            <li><a href="refresher.html">Refresher Series</a></li>
+            <li><a href="frappe.html">Frappe Series</a></li>
+            <li><a href="pastry.html">Pastries</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pasta.html">Pasta</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="career.html">Career Center</a>
+          <ul class="submenu">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="department.html">Our Department</a></li>
+          </ul>
+        </li>
+        <li><a href="merchendise.html">Merchandise</a></li>
+        <li><a href="outlet.html">Outlet</a></li>
+        <li><a href="reward.html">Reward</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="group.html">Group</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 style="color: #000000; text-align: center; margin-bottom: 1rem; font-size:3rem; font-weight:900;">Our Group Information</h1>
+
+  <div class="container">
+    <div class="image">
+      <img src="images/rabi.jpg" alt="Rabia'atul photo" />
+    </div>
+    <div class="text">
+      <div class="info"><strong>Name:</strong> Siti Rabia'atul Adawiyah Binti Ismail</div>
+      <div class="info"><strong>Course Code:</strong> KCDIM144</div>
+      <div class="info"><strong>Course Name:</strong> Informatic Library</div>
+      <div class="info"><strong>Faculty:</strong> Faculty of Information Science</div>
+      <div class="info"><strong>Submission Date:</strong> 02 July 2025</div>
+      <div class="info"><strong>ID:</strong> 2023822892</div>
+      <div class="info"><strong>Group:</strong> Group 1</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="image">
+      <img src="images/maira.jpg" alt="Maira Photo" />
+    </div>
+    <div class="text">
+      <div class="info"><strong>Name:</strong> Nur Humaira Nisa Binti Abdul Halim</div>
+      <div class="info"><strong>Course Code:</strong> KCDIM144</div>
+      <div class="info"><strong>Course Name:</strong> Informatic Library</div>
+      <div class="info"><strong>Faculty:</strong> Faculty of Information Science</div>
+      <div class="info"><strong>Submission Date:</strong> 02 July 2025</div>
+      <div class="info"><strong>ID:</strong> 2023478586</div>
+      <div class="info"><strong>Group:</strong> Group 1</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="image">
+      <img src="images/aisyah.jpg" alt="Aisyah Photo" />
+    </div>
+    <div class="text">
+      <div class="info"><strong>Name:</strong> Nuraisyah Binti Mohd Zamri</div>
+      <div class="info"><strong>Course Code:</strong> KCDIM144</div>
+      <div class="info"><strong>Course Name:</strong> Informatic Library</div>
+      <div class="info"><strong>Faculty:</strong> Faculty of Information Science</div>
+      <div class="info"><strong>Submission Date:</strong> 02 July 2025</div>
+      <div class="info"><strong>ID:</strong> 2023811192</div>
+      <div class="info"><strong>Group:</strong> Group 1</div>
+    </div>
+  </div>
+
+    <div class="container">
+    <div class="image">
+      <img src="images/hafizi.jpg" alt="Hafizi Photo" />
+    </div>
+    <div class="text">
+      <div class="info"><strong>Name:</strong> Muhammad Hafizi Bin Saad</div>
+      <div class="info"><strong>Course Code:</strong> KCDIM144</div>
+      <div class="info"><strong>Course Name:</strong> Informatic Library</div>
+      <div class="info"><strong>Faculty:</strong> Faculty of Information Science</div>
+      <div class="info"><strong>Submission Date:</strong> 02 July 2025</div>
+      <div class="info"><strong>ID:</strong> 2023188813</div>
+      <div class="info"><strong>Group:</strong> Group 1</div>
+    </div>
+  </div>
+
+
+<div class="container">
+    <div class="image">
+      <img src="images/hadira.jpg" alt="Hadirah Photo" />
+    </div>
+    <div class="text">
+      <div class="info"><strong>Name:</strong> Siti Hadirah Binti Nasib</div>
+      <div class="info"><strong>Course Code:</strong> KCDIM144</div>
+      <div class="info"><strong>Course Name:</strong> Informatic Library</div>
+      <div class="info"><strong>Faculty:</strong> Faculty of Information Science</div>
+      <div class="info"><strong>Submission Date:</strong> 02 July 2025</div>
+      <div class="info"><strong>ID:</strong> 2023664186</div>
+      <div class="info"><strong>Group:</strong> Group 1</div>
+    </div>
+  </div>
+<footer style="background-color: #6f4e37; color: white; padding: 3rem 2rem; margin-top: 4rem;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+
+
+    <div style="flex: 1 1 200px;">
+      <h3 style="margin-bottom: 1rem;">Blanc Brew</h3>
+      <p style="line-height: 1.6;">A specialty café offering artisanal coffee, handcrafted drinks, and warm ambiance across Malaysia.</p>
+    </div>
+
+<div style="flex: 1 1 150px; text-align: center;">
+  <h3 style="margin-bottom: 1rem;">Quick Links</h3>
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+    <li><a href="menu.html" style="color: white; text-decoration: none;">Menu</a></li>
+    <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+    <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+  </ul>
+</div>
+
+
+    <div style="flex: 1 1 250px;">
+      <h3 style="margin-bottom: 1rem;">Contact Us</h3>
+      <p>Email: hello@blancbrew.com</p>
+      <p>Phone: +60 12-345 6789</p>
+      <p>Follow us:
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Instagram</a> |
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Facebook</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; font-size: 0.9rem;">
+    &copy; 2025 Blanc Brew. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
