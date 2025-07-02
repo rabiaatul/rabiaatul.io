@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reward – Blanc Brew</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5dc;
+      color: #333;
+    }
+
+      nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.2rem 2rem;
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      backdrop-filter: blur(4px);
+    }
+
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-menu > li {
+      position: relative;
+    }
+
+    .logo {
+      height: 80px;
+      width: 140px;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      color: #6f4e37;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    .submenu li {
+      list-style: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    .submenu li:last-child {
+      border-bottom: none;
+    }
+
+    .submenu li a {
+      color: #333;
+      padding: 0.75rem 1rem;
+    }
+
+    .submenu li a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    .reward-section {
+      padding: 5rem 2rem;
+    }
+
+.reward-banner {
+  background-image: url('images/rewardbanner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.reward-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.reward-text {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.reward-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fffaf0;
+}
+
+.reward-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+    .zus-block {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin: auto;
+      max-width: 700px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-left: 6px solid #6f4e37;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .zus-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .zus-block h4 {
+      font-size: 1.6rem;
+      color: #6f4e37;
+      margin-bottom: 0.5rem;
+    }
+
+    .zus-block p {
+      font-size: 1rem;
+      color: #000000;
+      line-height: 1.6;
+    }
+
+    .section-cream1 { background-color: #fdf6e3; 
+                     background: url(images/phonee.jpg) no-repeat, url(images/cupcoffee.png) no-repeat;
+                     background-position:left center, right 50px center;
+                     padding: 50px;
+                     background-size: 350px, 200px;}
+                     
+    .section-cream2 {
+                     background-color: #fdf6e3;
+                     background-image: url('images/vip.png');
+                     background-repeat: no-repeat;
+                     background-position: left 150px center;
+                     background-size: 300px;
+                     padding: 50px;
+                     color: #333;
+    }
+
+    .section-tan {
+                     background-color: #d2b48c;
+                     background-image: url(images/cake1.png), url(images/cake2.png);
+                     background-repeat: no-repeat, no-repeat;
+                     background-position: right 230px center, right 80px center;
+                     background-size: 200px, 200px;
+                     padding: 50px;
+                 }
+
+    .section-brown {
+                     background-color: #6f4e37;
+                     background-image: url('images/curious.png');
+                     background-repeat: no-repeat;
+                     background-position: right 200px bottom;
+                     background-size: 250px;
+                     color: #fffaf0;
+                     padding: 50px;
+    }
+    .section-brown .zus-block {
+      background-color: #f5f5dc;
+      color: #fffaf0;
+      border-left-color: #d2b48c;
+    }
+    .section-brown .zus-block p { color: #f7f1e6; }
+
+    .section-form {
+  background-image: url('images/image1.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3rem 2rem;
+    }
+
+    .form-container {
+      background-color: #d2b48c;
+      border-radius: 8px;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      margin-bottom: 1rem;
+      color: #6f4e37;
+      text-align: center;
+    }
+
+    .form-container p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: #556B2F;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type=submit]:hover {
+      background-color: #04AA6D;
+      transform: scale(1.05);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes steamUp {
+      0% { opacity: 0; transform: translateX(-50%) translateY(0); }
+      50% { opacity: 1; }
+      100% { opacity: 0; transform: translateX(-50%) translateY(-40px); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #6e6e63;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <ul class="nav-menu">
+      <li>
+        <div style="position: relative; display: inline-block;">
+          <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+          <div class="steam"></div>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="about.html">About Us</a>
+        <ul class="submenu">
+          <li><a href="about.html#history">Introduction</a></li>
+          <li><a href="about.html#history">History</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="menu.html">Menu</a>
+        <ul class="submenu">
+            <li><a href="coffee.html">Coffee Series</a></li>
+            <li><a href="tea.html">Tea Series</a></li>
+            <li><a href="bubbletea.html">Bubble Tea Series</a></li>
+            <li><a href="matcha.html">Matcha Series</a></li>
+            <li><a href="refresher.html">Refresher Series</a></li>
+            <li><a href="frappe.html">Frappe Series</a></li>
+            <li><a href="pastry.html">Pastries</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pasta.html">Pasta</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="career.html">Career Center</a>
+        <ul class="submenu">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="department.html">Our Department</a></li>
+        </ul>
+      </li>
+        <li><a href="merchendise.html">Merchandise</a></li>
+        <li><a href="outlet.html">Outlet</a></li>
+        <li><a href="reward.html">Reward</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="group.html">Group</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="reward-banner">
+  <div class="reward-text">
+    <h1>Blanc Brew Reward</h1>
+    <p>Collect points. Unlock perks. Sip in style.</p>
+
+</section>
+
+<section class="reward-section section-cream1 fade-in">
+  <div class="zus-block">
+    <h4>Blanc Brew App</h4>
+    <p>The app that keeps on giving. Sign up to join the Blanc Brew Membership and become one of the coolest people in town.</p>
+  </div>
+</section>
+
+<section class="reward-section section-tan fade-in">
+  <div class="zus-block" style="margin-left: 0; margin-right: auto;">
+    <h4>Collect Points & Redeem Rewards</h4>
+    <p>Earn points with each purchase and redeem free drinks and limited-time vouchers.</p>
+  </div>
+</section>
+
+<section class="reward-section section-cream2 fade-in">
+  <div class="zus-block"style="margin-left: auto; margin-right: 0;">
+    <h4>VIP Member Benefits</h4>
+    <p>As a VIP, you'll enjoy early access to new drinks, personalized offers, and premium support — because your loyalty deserves more.</p>
+  </div>
+</section>
+
+<section class="reward-section section-brown fade-in">
+  <div class="zus-block" style="margin-left: 0; margin-right: auto;">
+    <h4>Feel Curious?</h4>
+    <p style="color: #000;">Check our FAQ for details about the app, rewards, and all things Blanc Brew.</p>
+  </div>
+</section>
+
+<section class="section-form fade-in">
+  <div class="form-container">
+    <h2>Creative Form</h2>
+    <p>Got a bold idea brewing? We’re listening. Share your wildest, most creative thoughts — dream it, and we might just serve it!</p>
+
+    <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25"><label for="fname">First Name</label></div>
+        <div class="col-75"><input type="text" id="fname" name="firstname" required></div>
+      </div>
+      <div class="row">
+        <div class="col-25"><label for="email">Email</label></div>
+        <div class="col-75"><input type="text" id="email" name="email" required></div>
+      </div>
+      <div class="row">
+        <div class="col-25"><label for="country">Country</label></div>
+        <div class="col-75">
+          <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25"><label for="subject">Message</label></div>
+        <div class="col-75"><textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea></div>
+      </div>
+      <div class="row"><input type="submit" value="Submit"></div>
+    </form>
+  </div>
+</section>
+
+<footer style="background-color: #6f4e37; color: white; padding: 3rem 2rem; margin-top: 4rem;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+
+    <div style="flex: 1 1 200px;">
+      <h3 style="margin-bottom: 1rem;">Blanc Brew</h3>
+      <p style="line-height: 1.6;">A specialty café offering artisanal coffee, handcrafted drinks, and warm ambiance across Malaysia.</p>
+    </div>
+    <div style="flex: 1 1 150px;">
+      <h3 style="margin-bottom: 1rem;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+        <li><a href="menu.html" style="color: white; text-decoration: none;">Menu</a></li>
+        <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+        <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div style="flex: 1 1 250px;">
+      <h3 style="margin-bottom: 1rem;">Contact Us</h3>
+      <p>Email: hello@blancbrew.com</p>
+      <p>Phone: +60 12-345 6789</p>
+      <p>Follow us:
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Instagram</a> |
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Facebook</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; font-size: 0.9rem;">
+    &copy; 2025 Blanc Brew. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
