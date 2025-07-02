@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>History - Blanc Brew</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-image: url("images/bg.jpg"); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.2rem 2rem;
+      position: sticky;
+      top: 0;
+      left:0;
+      right:0;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, 0.5); 
+      backdrop-filter: blur(4px);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-menu > li {
+      position: relative;
+    }
+
+    .logo {
+      height: 80px;
+      width: 140px;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      color: #6f4e37;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    .submenu li {
+      list-style: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    .submenu li:last-child {
+      border-bottom: none;
+    }
+
+    .submenu li a {
+      color: #333;
+      padding: 0.75rem 1rem;
+    }
+
+    .submenu li a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    #menu .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .menu-items .item {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+.banner {
+  width: 100%;
+  max-height: 400px; /* adjust height if needed */
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.story-section {
+  padding: 4rem 2rem;
+}
+
+.story-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: #ffffff;
+  padding: 4rem 3rem;
+  width: 100%;   
+  max-width: 1200px;
+  margin: auto;
+  border: 1px solid #ccc;
+}
+
+.story-image {
+  flex: 1 1 40%;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.story-text {
+  flex: 1 1 55%;
+}
+
+.story-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #6f4e37;
+}
+
+.story-text p {
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .story-content {
+    flex-direction: row; 
+    flex-wrap: wrap;
+  }
+}
+
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #6f4e37;
+      color: #fff;
+    }
+  </style>
+</head>
+
+
+<body>
+<header>
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+        </li>
+        <li class="dropdown">
+          <a href="about.html">About Us</a>
+          <ul class="submenu">
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="history.html">History</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="menu.html">Menu</a>
+          <ul class="submenu">
+            <li><a href="coffee.html">Coffee Series</a></li>
+            <li><a href="tea.html">Tea Series</a></li>
+            <li><a href="bubbletea.html">Bubble Tea Series</a></li>
+            <li><a href="matcha.html">Matcha Series</a></li>
+            <li><a href="refresher.html">Refresher Series</a></li>
+            <li><a href="frappe.html">Frappe Series</a></li>
+            <li><a href="pastry.html">Pastries</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="pasta.html">Pasta</a></li>
+            <li><a href="pizza.html">Pizza</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="career.html">Career Center</a>
+          <ul class="submenu">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="department.html">Our Department</a></li>
+          </ul>
+        </li>
+        <li><a href="merchendise.html">Merchandise</a></li>
+	<li><a href="outlet.html">Outlet</a></li>
+        <li><a href="reward.html">Reward</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+</header>
+<div class="banner">
+  <img src="images/history_banner.png" alt="History banner">
+</div>
+<section class="story-section">
+  <div class="story-content">
+    <div class="story-image">
+      <img src="images/map.png" alt="peninsular Malaysia map">
+    </div>
+    <div class="story-text">
+      <h2>The Story of Blanc & Brew</h2>
+      <p>Blanc & Brew began in 2020 as a quiet escape from the city buzz — a café where simplicity met soul, and every cup of coffee was brewed with meaning. Inspired by Scandinavian minimalism and Malaysia’s vibrant café culture, our founders envisioned a calm, elegant space where people could slow down, reflect, and reconnect — with themselves and each other.</p>
+      <p>What started as a humble space in Kuala Lumpur soon grew into a nationwide café experience. Today, Blanc & Brew can be found in some of Malaysia’s most beloved locations — including Paradigm Mall in Johor Bahru, Ipoh Parade Mall in Perak, Mid Valley Megamall in Kuala Lumpur, Sunway Pyramid in Selangor, AEON Mall in Melaka, and Kuantan City Mall in Pahang. Each outlet carries the same warm, minimalist design, rich coffee aroma, and peaceful energy that defines who we are.</p>
+    </div>
+  </div>
+</section>
+
+<footer style="background-color: #6f4e37; color: white; padding: 3rem 2rem; margin-top: 4rem;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+ 
+    <div style="flex: 1 1 200px;">
+      <h3 style="margin-bottom: 1rem;">Blanc Brew</h3>
+      <p style="line-height: 1.6;">A specialty café offering artisanal coffee, handcrafted drinks, and warm ambiance across Malaysia.</p>
+    </div>
+
+    <div style="flex: 1 1 150px;">
+      <h3 style="margin-bottom: 1rem;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+        <li><a href="menu.html" style="color: white; text-decoration: none;">Menu</a></li>
+        <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+        <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 250px;">
+      <h3 style="margin-bottom: 1rem;">Contact Us</h3>
+      <p>Email: hello@blancbrew.com</p>
+      <p>Phone: +60 12-345 6789</p>
+      <p>Follow us:
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Instagram</a> |
+        <a href="#" style="color: white; text-decoration: none; margin-left: 0.5rem;">Facebook</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; font-size: 0.9rem;">
+    &copy; 2025 Blanc Brew. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
